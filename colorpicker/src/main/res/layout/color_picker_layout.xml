@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:padding="10dp"
+    android:background="#CFCFCF">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clipChildren="false">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipChildren="false">
+            <ImageView
+                android:id="@+id/color_palette"
+                android:src = "@drawable/color_circle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:clipChildren="false"
+                />
+            <ImageView
+                android:id="@+id/color_palette_thumb"
+                android:src = "@drawable/seek_thumb_white_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                />
+        </FrameLayout>
+
+        <SeekBar
+            android:background="#92EC51"
+            android:id="@+id/color_value_line"
+            android:layout_height="30dp"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="10dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:progressDrawable = "@null"
+            android:thumb="@drawable/seek_thumb_white_black"
+            android:max="255"
+            android:progress = "255"/>
+
+        <FrameLayout
+            android:id="@+id/alpha_block"
+            android:layout_height="30dp"
+            android:layout_width="match_parent"
+            android:clipChildren="false"
+            android:layout_marginVertical="10dp">
+            <com.andriidubovyk.colorpicker.CheckerboardBackgroundView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
+            <SeekBar
+                android:background="#43D399"
+                android:id="@+id/color_alpha_line"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:progressDrawable = "@null"
+                android:thumb="@drawable/seek_thumb_white_black"
+                android:max="255"
+                android:progress = "255"/>
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clipChildren="true"
+        android:clipToPadding ="true"
+        android:layout_marginLeft = "10dp">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <com.andriidubovyk.colorpicker.CheckerboardBackgroundView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
+            <View
+                android:id="@+id/start_color_display"
+                android:layout_height="30dp"
+                android:layout_width="match_parent"
+                android:background="#008822"/>
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <com.andriidubovyk.colorpicker.CheckerboardBackgroundView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
+            <View
+                android:id="@+id/color_display"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/color_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14.5sp"
+            android:text="#ff000000"
+            android:inputType="textNoSuggestions"
+            android:singleLine="true"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/predefined_colors_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

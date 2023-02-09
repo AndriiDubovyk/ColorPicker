@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="5dp"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless">
+    <com.andriidubovyk.colorpicker.CheckerboardBackgroundView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+        <View
+
+            android:id="@+id/color_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </View>
+</FrameLayout>
